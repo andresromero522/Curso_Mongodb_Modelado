@@ -1,0 +1,10 @@
+use("afro_store")
+
+db.products.insertOne({
+    name: 'Camiseta_1',
+    sizes: ['L', 'XL'],
+    category: {
+        name: 'category_1',
+        image: 'url'
+    }
+})

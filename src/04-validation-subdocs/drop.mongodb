@@ -1,0 +1,3 @@
+use("afro_store")
+
+db.products.drop()

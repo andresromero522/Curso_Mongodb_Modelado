@@ -1,0 +1,8 @@
+use("afro_store")
+
+db.users.insertOne({
+    name: 'Carlos',
+    last_name: 'Molina',
+    email: 'nico@gmail.com',
+    password: 'Asdfghjkl156'
+})
