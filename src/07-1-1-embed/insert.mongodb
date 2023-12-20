@@ -1,0 +1,19 @@
+use("afro_store")
+
+db.users.insertOne({
+    name: 'Ana',
+    email: 'anacervantesc@gmail.com',
+    password: 'Alodhy675',
+    role: 'customer',
+    social_accounts: ['twitter', 'facebook'],
+    address: {
+        street: 'Calle 112',
+        city: 'Bogota',
+        zip: '07009'
+    },
+    shiping_address: {
+        street: 'Calle 15',
+        city: 'Bogota',
+        zip: '07003'
+    }
+})

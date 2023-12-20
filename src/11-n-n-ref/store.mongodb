@@ -1,0 +1,20 @@
+use("afro_store")
+
+db.stores.insertMany([
+    {
+        name: 'Alameda',
+        products_ids: [
+            ObjectId('65811428115c3e73ecedf607'),
+            ObjectId('658283a945bb7c75b02fec88'),
+            ObjectId('658283a945bb7c75b02fec8a')
+        ]
+    },
+    {
+        name: 'Miramar',
+        products_ids: [
+            ObjectId('65811428115c3e73ecedf607'),
+            ObjectId('658283a945bb7c75b02fec88'),
+            ObjectId('658283a945bb7c75b02fec89')
+        ] 
+    }
+])

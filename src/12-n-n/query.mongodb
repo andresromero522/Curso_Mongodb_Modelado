@@ -1,0 +1,17 @@
+use("afro_store")
+
+db.products.find()
+db.stores.find()
+// 658283a945bb7c75b02fec88 - product
+// 658284e4142309797ad9e795 - store
+
+db.products.aggregate([
+  {
+      $lookup: {
+        from: 'stores',
+        localField: 'stores_ids',
+        foreignField: '_id',
+        as: 'stores'
+      }
+  }
+])

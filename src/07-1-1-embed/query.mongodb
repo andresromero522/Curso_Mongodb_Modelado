@@ -1,0 +1,5 @@
+use("afro_store")
+
+db.users.find({
+    "address.city": "Bogota"
+})

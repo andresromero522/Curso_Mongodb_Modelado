@@ -1,0 +1,36 @@
+use("afro_store")
+
+db.orders.find({user_id: ObjectId('658273b5e9bbc71fd792be2c')}).count()
+db.orders.find({user_id: ObjectId('6582734a606d00717cf64173')}).count()
+db.users.find()
+db.orders.aggregate([
+    {
+        $match: {
+            _id: ObjectId('65827ae5f6b2e98358e8acf4')
+        }
+    },
+    {
+        $lookup: {
+            from: 'users',
+            localField: 'user_id',
+            foreignField: '_id',
+            as: 'user'
+        }
+    }
+])
+
+db.users.aggregate([
+    {
+        $match: {
+          _id: ObjectId('6582734a606d00717cf64173')
+        }
+    },
+    {
+        $lookup: {
+          from: 'orders',
+          localField: '_id',
+          foreignField: 'user_id',
+          as: 'orders'
+        }
+    }
+])

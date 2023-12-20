@@ -1,0 +1,20 @@
+use("afro_store")
+
+db.products.insertMany([
+    {
+    name: 'Pantalon',
+    sizes: ['30', '32', '34'],
+    price: 150
+    },
+    {
+        name: 'Falda',
+        sizes: ['L', 'M', 'XL'],
+        price: 250
+    },
+    {
+        name: 'Camiseta',
+        sizes: ['L', 'M', 'S'],
+        price: 100
+    }
+
+    ])

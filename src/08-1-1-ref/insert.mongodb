@@ -1,0 +1,17 @@
+use("afro_store")
+
+db.stores.insertOne({
+    storeId: "ST001",
+    name: "Alameda",
+    address: "Calle 112 43"
+})
+
+db.stores_details.insertOne({
+    storeId: "ST001",
+    name: "Alameda",
+    description: "Tienda del sector Alameda",
+    manager: {
+        email: "carlos_433@hotmail.com",
+        cellphone: '3695847'
+    }
+})
