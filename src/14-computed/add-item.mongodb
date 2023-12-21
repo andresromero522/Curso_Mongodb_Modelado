@@ -1,0 +1,20 @@
+use("afro_store")
+
+db.orders.updateOne(
+    {_id: ObjectId('6583b56163296607a3b1732c')},
+    {
+        $push: {
+            items: {
+                name: 'Camiseta',
+                price: 100,
+                qty: 3,
+                product_id: ObjectId('658283a945bb7c75b02fec8a')
+            }
+        },
+        $inc: {
+            total: 100 * 3
+        }
+    }
+)
+
+// 6583b56163296607a3b1732c

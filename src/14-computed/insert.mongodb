@@ -1,0 +1,8 @@
+use("afro_store")
+
+db.orders.insertOne({
+    user_id: ObjectId("658273b5e9bbc71fd792be2c"),
+    date: "2023-12-20",
+    total: 0,
+    items: []
+})
